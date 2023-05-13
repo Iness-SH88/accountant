@@ -10,7 +10,7 @@
 <style>
 *{box-sizing:border-box;}
 body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;}
-.cover_frame{padding:3em;background-image:url("images/bgr_1.jpg");background-size:cover;height:100vh;display:flex;align-items:center;justify-content:center;}
+.cover_frame{padding:3em;background-image:url("images/bgr_1.jpg");background-size:cover;height:100vh;height: calc(var(--vh, 1vh) * 100);display:flex;align-items:center;justify-content:center;}
 .cover{min-height:60vh;min-width:70vw;padding:2em;background:rgba(255,255,255,.8);border-radius:3px;text-align:center;}
 .cover_name{display:flex;flex-flow:column;}
 .cover_left,.cover_right{flex:100%;display:flex;align-items:center;}
@@ -19,7 +19,7 @@ body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;}
 .cover_text{font-family:'Cormorant Infant',serif;font-size:1.25em}
 
 .main_wrap{display:flex;flex-flow:column;background:#000;}
-.main_left_wrap{height:100vh;display:flex;flex-flow:column;}
+.main_left_wrap{height:100vh;height: calc(var(--vh, 1vh) * 100);display:flex;flex-flow:column;}
 .main_name_mob{display:flex;flex:10%;align-items:center;padding:.5rem 0 .5rem 1rem;color:#f2f2f2;border-bottom:1px solid #595959;border-top:1px solid #595959;}
 .main_name_mob_l{font-family:'Abril Fatface',cursive;font-size:2em;border-right:2px solid #f2f2f2;justify-content:right;padding-right:.5em;}
 .main_name_mob_r{font-family:Gruppo,cursive;padding-left:.5em;}
@@ -34,11 +34,11 @@ body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;}
 #ab{margin:1rem;padding:1rem;} #rd{font-size:1em;color:#d9d9d9;}
 #layer{fill:#bfbfbf;width:1.5em;}
 .main_right{color:#f2f2f2;}
-.main_choice{height:100vh;display:flex;flex-flow:column;align-items:center;border-bottom:1px solid #595959;border-top:1px solid #595959;background:radial-gradient(ellipse at center,#262626,#000);}
+.main_choice{height:100vh;height: calc(var(--vh, 1vh) * 100);display:flex;flex-flow:column;align-items:center;border-bottom:1px solid #595959;border-top:1px solid #595959;background:radial-gradient(ellipse at center,#262626,#000);}
 .choice_text{padding:1rem 0;text-align:center;font-size:2em;}
 .group{font-family:'Montserrat Alternates',sans-serif;font-size:2.5em;width:70vw;height:3em;border:1px solid #f2f2f2;background-image:url("images/bgr_1.jpg");background-size:cover;border-radius:5px;box-shadow:3px 3px 10px #a6a6a6;margin:.75em;padding:1em;display:flex;justify-content:center;align-items:center;}
 .group:hover{background-size:contain;}
-.f_wrap{height:100vh;}
+.f_wrap{height:100vh;height: calc(var(--vh, 1vh) * 100);}
 .footer{height:60%;display:flex;align-items:center;justify-content:center;background-image:url("images/bgr_1.jpg");background-size:cover;border-bottom:1px solid #595959;}
 .contact{color:#000;display:flex;flex-flow:column;margin:3em;padding:1em 1em 3em 1em;background:rgba(255,255,255,.8);border-radius:3px;min-width:75%;}
 .contact-row{display:flex;align-items:center;}
@@ -132,5 +132,15 @@ body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;}
 	</div>
   </div>
 </div>
+<script>
+function init100vh(){
+  function setHeight(){
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  setHeight();
+  window.addEventListener('resize', setHeight);
+}
+</script>
 </body>
 </html>
