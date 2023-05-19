@@ -36,10 +36,10 @@ body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;}
 .main_left img{width:100%;vertical-align:middle;}
 .main_left_text{color:#f2f2f2;position:absolute;top:0%;bottom:0%;background:rgba(0,0,0,.1);padding:9em 1em 1em 1em;font-size:2em;}
 
-.page_3{display:flex;flex-flow:column;align-items:center;height:calc(var(--vh, 1vh) * 100);padding:1em 0;}
+.page_3{display:flex;flex-flow:column;align-items:center;justify-content:center;height:calc(var(--vh, 1vh) * 100);padding:1em 0;}
 .about-icon{display:flex;justify-content:center;align-items:center;padding:3px;width:2.5em;height:2.5em;background:#800060;border-radius:50%;}
 .about-info{display:flex;flex-flow:column;justify-content:center;align-items:center;font-family:'Oswald',sans-serif;margin:1em;padding:1em;
-height:7em;width:75vw;text-align:center;background:linear-gradient(120deg,#262626,#1a1a1a,#000);color:#bfbfbf;font-size:1em;
+height:9em;width:75vw;text-align:center;background:linear-gradient(120deg,#262626,#1a1a1a,#000);color:#bfbfbf;font-size:1.5em;
 border-radius:0 0 7px 7px;border:1px solid #800060;border-top:none;}
 #layer{fill:#bfbfbf;width:1.5em;height:1.5em;}
 
@@ -48,7 +48,7 @@ border-radius:0 0 7px 7px;border:1px solid #800060;border-top:none;}
 border-bottom:1px solid #595959;border-top:1px solid #595959;background:radial-gradient(ellipse at center,#262626,#000);}
 .main_choice>p{margin:0;}
 .upCase{text-transform:uppercase;}
-.choice_text{font-size:1rem;color:#404040;}
+.choice_text{font-size:1.5rem;color:#404040;}
 .group_wrap{display:flex;justify-content:center;align-items:center;}
 .group{font-size:2.5rem;color:#e600a8;width:30vw;height:3rem;cursor:pointer;border:none;outline:none;background:#800060;border-radius:5px;
 box-shadow:12px 12px 16px 0 rgba(255,255,255,.25) inset, -8px -8px 12px 0 rgba(0,0,0,.25) inset;margin:.75rem;padding:1em;
@@ -60,13 +60,15 @@ display:flex;justify-content:center;align-items:center;}
 #but_3{animation:size_3 9s infinite;}
 @keyframes size_3{0%{transform:scale(1);}40%{transform:scale(1);}50%{transform:scale(1.05);}60%{transform:scale(1);}100%{transform:scale(1);}}
 .group:hover{animation:none;}
-.f_wrap{height: calc(var(--vh, 1vh) * 100);}
-.footer{height:65%;display:flex;align-items:center;justify-content:center;background-image:url("images/bgr_1.jpg");background-size:cover;border-bottom:1px solid #595959;}
+
+.f_wrap{height: calc(var(--vh, 1vh) * 100);font-size:24px;}
+.footer{height:70%;display:flex;align-items:center;justify-content:center;background-image:url("images/bgr_1.jpg");background-size:cover;border-bottom:1px solid #595959;}
 .contact{font-family:'Oswald',sans-serif;color:#000;display:flex;flex-flow:column;justify-content:center;align-items:center;margin:3em;padding:1em;
 background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 .contact-icon,.contact-info{padding:.25em 1em;}
 .contact a{width:1.5em;height:1.5em;}
-.copyright{height:35%;padding:1em 0;font-size:.75em;text-align:center;background:#000;}
+#i-foot{width:1.5em;}
+.copyright{height:30%;padding:1em 0;font-size:.75em;text-align:center;background:#000;}
 .copyright a{text-decoration:none;color:#fff;}
 .btn-wrap{display:flex;justify-content:center;border-bottom:1px solid #595959;}
 .social{margin:.5rem;background:transparent;border:none;}
@@ -137,12 +139,12 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 	<div class="f_wrap">
 	<div class="footer">
 	  <div class="contact"> 		
-	    <span style="font-family:'Prosto One',cursive;font-size:2em;margin-bottom:.25em;text-transform:uppercase;">Контакты:</span>
-	    <div class="contact-icon"><a href="tel:+380662317920"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.25em"><path d="M13,1a1,1,0,0,1,1-1A10.011,10.011,0,0,1,24,10a1,1,0,0,1-2,0,8.009,8.009,0,0,0-8-8A1,1,0,0,1,13,1Zm1,5a4,4,0,0,1,4,4,1,1,0,0,0,2,0,6.006,6.006,0,0,0-6-6,1,1,0,0,0,0,2Zm9.093,10.739a3.1,3.1,0,0,1,0,4.378l-.91,1.049c-8.19,7.841-28.12-12.084-20.4-20.3l1.15-1A3.081,3.081,0,0,1,7.26.906c.031.031,1.884,2.438,1.884,2.438a3.1,3.1,0,0,1-.007,4.282L7.979,9.082a12.781,12.781,0,0,0,6.931,6.945l1.465-1.165a3.1,3.1,0,0,1,4.281-.006S23.062,16.708,23.093,16.739Zm-1.376,1.454s-2.393-1.841-2.424-1.872a1.1,1.1,0,0,0-1.549,0c-.027.028-2.044,1.635-2.044,1.635a1,1,0,0,1-.979.152A15.009,15.009,0,0,1,5.9,9.3a1,1,0,0,1,.145-1S7.652,6.282,7.679,6.256a1.1,1.1,0,0,0,0-1.549c-.031-.03-1.872-2.425-1.872-2.425a1.1,1.1,0,0,0-1.51.039l-1.15,1C-2.495,10.105,14.776,26.418,20.721,20.8l.911-1.05A1.121,1.121,0,0,0,21.717,18.193Z"/></svg></a></div>
+	    <span style="font-family:'Prosto One',cursive;font-size:1.75em;margin-bottom:.25em;text-transform:uppercase;">Контакты:</span>
+	    <div class="contact-icon"><a href="tel:+380662317920"><svg xmlns="http://www.w3.org/2000/svg" id="i-foot" viewBox="0 0 24 24"><path d="M13,1a1,1,0,0,1,1-1A10.011,10.011,0,0,1,24,10a1,1,0,0,1-2,0,8.009,8.009,0,0,0-8-8A1,1,0,0,1,13,1Zm1,5a4,4,0,0,1,4,4,1,1,0,0,0,2,0,6.006,6.006,0,0,0-6-6,1,1,0,0,0,0,2Zm9.093,10.739a3.1,3.1,0,0,1,0,4.378l-.91,1.049c-8.19,7.841-28.12-12.084-20.4-20.3l1.15-1A3.081,3.081,0,0,1,7.26.906c.031.031,1.884,2.438,1.884,2.438a3.1,3.1,0,0,1-.007,4.282L7.979,9.082a12.781,12.781,0,0,0,6.931,6.945l1.465-1.165a3.1,3.1,0,0,1,4.281-.006S23.062,16.708,23.093,16.739Zm-1.376,1.454s-2.393-1.841-2.424-1.872a1.1,1.1,0,0,0-1.549,0c-.027.028-2.044,1.635-2.044,1.635a1,1,0,0,1-.979.152A15.009,15.009,0,0,1,5.9,9.3a1,1,0,0,1,.145-1S7.652,6.282,7.679,6.256a1.1,1.1,0,0,0,0-1.549c-.031-.03-1.872-2.425-1.872-2.425a1.1,1.1,0,0,0-1.51.039l-1.15,1C-2.495,10.105,14.776,26.418,20.721,20.8l.911-1.05A1.121,1.121,0,0,0,21.717,18.193Z"/></svg></a></div>
 		<div class="contact-info">(+38) 066-23-17-920</div>
-	    <div class="contact-icon"><a href="mailto:promimpex8@ukr.net"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.25em"><path d="M19,1H5A5.006,5.006,0,0,0,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6A5.006,5.006,0,0,0,19,1ZM5,3H19a3,3,0,0,1,2.78,1.887l-7.658,7.659a3.007,3.007,0,0,1-4.244,0L2.22,4.887A3,3,0,0,1,5,3ZM19,21H5a3,3,0,0,1-3-3V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V18A3,3,0,0,1,19,21Z"/></svg></a></div>
+	    <div class="contact-icon"><a href="mailto:promimpex8@ukr.net"><svg xmlns="http://www.w3.org/2000/svg" id="i-foot" viewBox="0 0 24 24"><path d="M19,1H5A5.006,5.006,0,0,0,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6A5.006,5.006,0,0,0,19,1ZM5,3H19a3,3,0,0,1,2.78,1.887l-7.658,7.659a3.007,3.007,0,0,1-4.244,0L2.22,4.887A3,3,0,0,1,5,3ZM19,21H5a3,3,0,0,1-3-3V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V18A3,3,0,0,1,19,21Z"/></svg></a></div>
 		<div class="contact-info">promimpex8@ukr.net</div>
-	    <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.25em"><path d="M12,6a4,4,0,1,0,4,4A4,4,0,0,0,12,6Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,12Z"/><path d="M12,24a5.271,5.271,0,0,1-4.311-2.2c-3.811-5.257-5.744-9.209-5.744-11.747a10.055,10.055,0,0,1,20.11,0c0,2.538-1.933,6.49-5.744,11.747A5.271,5.271,0,0,1,12,24ZM12,2.181a7.883,7.883,0,0,0-7.874,7.874c0,2.01,1.893,5.727,5.329,10.466a3.145,3.145,0,0,0,5.09,0c3.436-4.739,5.329-8.456,5.329-10.466A7.883,7.883,0,0,0,12,2.181Z"/></svg></div>
+	    <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" id="i-foot" viewBox="0 0 24 24"><path d="M12,6a4,4,0,1,0,4,4A4,4,0,0,0,12,6Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,12Z"/><path d="M12,24a5.271,5.271,0,0,1-4.311-2.2c-3.811-5.257-5.744-9.209-5.744-11.747a10.055,10.055,0,0,1,20.11,0c0,2.538-1.933,6.49-5.744,11.747A5.271,5.271,0,0,1,12,24ZM12,2.181a7.883,7.883,0,0,0-7.874,7.874c0,2.01,1.893,5.727,5.329,10.466a3.145,3.145,0,0,0,5.09,0c3.436-4.739,5.329-8.456,5.329-10.466A7.883,7.883,0,0,0,12,2.181Z"/></svg></div>
 		<div class="contact-info">г.Запорожье</div>
 	  </div>
 	</div>
