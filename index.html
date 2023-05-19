@@ -11,18 +11,21 @@
 <style>
 *{box-sizing:border-box;}
 body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;background:#000;}
-.cover_frame{padding:3em;background-image:url("images/bgr_1.jpg");background-size:cover;height: calc(var(--vh, 1vh) * 100);display:flex;align-items:center;justify-content:center;}
-.cover{height:60vh;min-width:75vw;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;text-align:center;}
+.cover_frame{padding:3em;background-image:url("images/bgr_1.jpg");background-size:cover;height: calc(var(--vh, 1vh) * 100);display:flex;align-items:center;justify-content:center;flex-flow:column;}
+.cover{height:50vh;min-width:75vw;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;text-align:center;}
 .cover_name{display:none;flex-flow:column;width:200px;}
 .cover_left,.cover_right{flex:100%;display:flex;justify-content:center;align-items:center;}
 .cover_left{font-family:'Playfair Display',serif;font-size:6em;border-bottom:2px solid #000;}
 .cover_right{font-family:Gruppo,cursive;font-size:3em;}
 .cover_text{vertical-align:center;}
 .cover_text>p{margin:0;}
-.cover_btn{display:flex;justify-content:center;align-items:center;margin:3em 0 1em 0;}
+.cover_btn{display:flex;justify-content:center;align-items:center;margin:3em 0 0 0;}
 .cover_btn a{flex:50%;border:1px solid #808080;border-radius:2px;padding:.25em;background:#ccc;}
 #i-cov{fill:#595959;width:1.5em;}
-
+.lang_btn{margin:3em;outline:none;}
+.lang_btn a{border:1px solid #808080;border-radius:3px;border:none;padding:.75em;height:2em;background:#4B0080;color:#ccc;text-decoration:none;
+box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
+.lang_btn:active{transform:translateY:4px;}
 .line_one{font-family:'Raleway',sans-serif;text-transform:uppercase;font-size:1.65em;}
 .line_two{font-family:'Comforter',cursive;font-size:1.5em;border-top:3px solid #595959;padding:.75em 0;}
 .stretch_it{white-space:nowrap;}
@@ -30,14 +33,14 @@ body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;backgr
 
 .main_wrap{display:flex;flex-flow:column;}
 .main_left_wrap{height:100vh;height: calc(var(--vh, 1vh) * 100);display:flex;flex-flow:column;}
-.main_name_mob{display:flex;flex:10%;align-items:center;padding:.5rem 0 .5rem 1rem;color:#f2f2f2;border-bottom:1px solid #595959;border-top:1px solid #595959;}
+.main_name_mob{display:flex;flex:10%;align-items:center;padding:.5rem 1.5em;color:#f2f2f2;border-bottom:1px solid #595959;border-top:1px solid #595959;}
 .main_name_mob_l{font-family:'Playfair Display',serif;font-size:2em;border-right:2px solid #f2f2f2;justify-content:right;padding-right:.5em;}
 .main_name_mob_r{font-family:Gruppo,cursive;padding-left:.5em;}
 .main_name{display:none;}
 
 .main_left{display:flex;flex:90%;position:relative;height:60%;}
 .main_left img{width:100%;vertical-align:middle;}
-.main_left_text{color:#f2f2f2;position:absolute;top:0%;bottom:0%;background:rgba(0,0,0,.1);padding:9em 1em 1em 1em;font-size:2em;}
+.main_left_text{color:#f2f2f2;position:absolute;top:0%;bottom:0%;width:100vw;background:rgba(0,0,0,.1);padding:9em 1em 1em 1em;font-size:2em;}
 
 .page_3{display:flex;flex-flow:column;align-items:center;justify-content:center;height:calc(var(--vh, 1vh) * 100);padding:1em 0;}
 .about-icon{display:flex;justify-content:center;align-items:center;padding:3px;width:2.5em;height:2.5em;background:#800060;border-radius:50%;}
@@ -63,6 +66,8 @@ display:flex;justify-content:center;align-items:center;}
 #but_3{animation:size_3 9s infinite;}
 @keyframes size_3{0%{transform:scale(1);}40%{transform:scale(1);}50%{transform:scale(1.05);}60%{transform:scale(1);}100%{transform:scale(1);}}
 .group:hover{animation:none;}
+.choice_bgr{overflow:hidden;width:60vw;height:40vh;padding:0 1em;border:1px solid #4B0080;font-family: 'Roboto', sans-serif;font-size:16px;
+text-align:left;color:#4d4d4d;}
 
 .f_wrap{height: calc(var(--vh, 1vh) * 100);}
 .footer{height:70%;display:flex;align-items:center;justify-content:center;background-image:url("images/bgr_1.jpg");background-size:cover;
@@ -74,8 +79,8 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 #i-foot{width:1.5em;}
 .copyright{height:30%;padding:1em 0;font-size:.75em;text-align:center;}
 .copyright a{text-decoration:none;color:#fff;}
-.btn-wrap{display:flex;justify-content:center;border-bottom:1px solid #595959;}
-.social{margin:.5rem;background:transparent;border:none;}
+.btn-wrap{display:flex;justify-content:center;border-bottom:1px solid #595959;font-size:18px;}
+.social{margin:.5em;background:transparent;border:none;}
 </style>
 </head>
 
@@ -90,13 +95,15 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 	<p class="stretch line_one">Бухгалтерские</p>
 	<p class="stretch line_one" style="font-size:3em;">услуги</p>
 	<p class="stretch line_two">для ФЛП в Украине</p>
-	<span style="font-size:5em;">&#8372</span>
 	</div>
 	<div class="cover_btn">
 	<a href="tel:+380662317920"><svg xmlns="http://www.w3.org/2000/svg" id="i-cov" viewBox="0 0 24 24"><path d="M13,1a1,1,0,0,1,1-1A10.011,10.011,0,0,1,24,10a1,1,0,0,1-2,0,8.009,8.009,0,0,0-8-8A1,1,0,0,1,13,1Zm1,5a4,4,0,0,1,4,4,1,1,0,0,0,2,0,6.006,6.006,0,0,0-6-6,1,1,0,0,0,0,2Zm9.093,10.739a3.1,3.1,0,0,1,0,4.378l-.91,1.049c-8.19,7.841-28.12-12.084-20.4-20.3l1.15-1A3.081,3.081,0,0,1,7.26.906c.031.031,1.884,2.438,1.884,2.438a3.1,3.1,0,0,1-.007,4.282L7.979,9.082a12.781,12.781,0,0,0,6.931,6.945l1.465-1.165a3.1,3.1,0,0,1,4.281-.006S23.062,16.708,23.093,16.739Zm-1.376,1.454s-2.393-1.841-2.424-1.872a1.1,1.1,0,0,0-1.549,0c-.027.028-2.044,1.635-2.044,1.635a1,1,0,0,1-.979.152A15.009,15.009,0,0,1,5.9,9.3a1,1,0,0,1,.145-1S7.652,6.282,7.679,6.256a1.1,1.1,0,0,0,0-1.549c-.031-.03-1.872-2.425-1.872-2.425a1.1,1.1,0,0,0-1.51.039l-1.15,1C-2.495,10.105,14.776,26.418,20.721,20.8l.911-1.05A1.121,1.121,0,0,0,21.717,18.193Z"/></svg></a>
 	<a href="mailto:promimpex8@ukr.net"><svg xmlns="http://www.w3.org/2000/svg" id="i-cov" viewBox="0 0 24 24"><path d="M19,1H5A5.006,5.006,0,0,0,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6A5.006,5.006,0,0,0,19,1ZM5,3H19a3,3,0,0,1,2.78,1.887l-7.658,7.659a3.007,3.007,0,0,1-4.244,0L2.22,4.887A3,3,0,0,1,5,3ZM19,21H5a3,3,0,0,1-3-3V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V18A3,3,0,0,1,19,21Z"/></svg></a>
 	</div>
- </div>
+  </div>
+  <div class="lang_btn">
+	<a href="#">Перейти на українську</a>
+  </div>
 </div>
 
 
@@ -143,7 +150,21 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 	  <button class="group" id="but_2">2</button>
 	  <button class="group" id="but_3">3</button>
 	  </div>
+	  <div class="choice_bgr">
+	<p>291.5. Не могут быть плательщиками единого налога первой – третьей групп:
+	<p>291.5.1. субъекты хозяйствования (юридические лица и физические лица – предприниматели), осуществляющие:
+	<p>1) деятельность по организации, проведению азартных игр, лотерей (кроме распространения лотерей), пари (букмекерское пари, пари тотализатора);
+	<p>2) обмен иностранной валюты;
+    <p>3) производство, экспорт, импорт, продажа подакцизных товаров (кроме розничной продажи горюче-смазочных материалов в емкостях до 20 литров и деятельности физических лиц, связанной с розничной продажей пива, сидра, пери (без добавления спирта) и столовых вин);
+    <p>4) добыча, производство, реализацию драгоценных металлов и драгоценных камней, в том числе органогенного образования (кроме производства, поставки, продажи (реализации) ювелирных и бытовых изделий из драгоценных металлов, драгоценных камней, драгоценных камней органогенного образования и полудрагоценных камней);
+    <p>5) добыча, реализацию полезных ископаемых, кроме реализации полезных ископаемых местного значения;
+    <p>6) деятельность в сфере финансового посредничества, кроме деятельности в сфере страхования, осуществляемую страховыми агентами, определенными Законом Украины "О страховании", сюрвейерами, аварийными комиссарами и аджастерами, определенными разделом III настоящего Кодекса;
+    <p>7) деятельность по управлению предприятиями;</p>
 	</div>
+	</div>
+	
+	
+	
 	<div class="f_wrap">
 	<div class="footer">
 	  <div class="contact"> 		
