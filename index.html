@@ -11,7 +11,8 @@
 <style>
 *{box-sizing:border-box;}
 body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;background:#000;}
-.cover_frame{padding:20vh 3em 3em 3em;background-image:url("images/bgr_1.jpg");background-size:cover;height:calc(var(--vh, 1vh) * 100);text-align:center;}
+.cover_frame{padding:15vh 3em 3em 3em;background-image:url("images/bgr_1.jpg");background-size:cover;height:calc(var(--vh, 1vh) * 100);
+display:flex;align-items:center;flex-flow:column;}
 .cover{height:40vh;min-width:75vw;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;text-align:center;}
 .cover_name{display:none;flex-flow:column;width:200px;}
 .cover_left,.cover_right{flex:100%;display:flex;justify-content:center;align-items:center;}
@@ -22,25 +23,23 @@ body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;backgr
 .cover_btn{display:flex;justify-content:center;align-items:center;margin:3em 0 0 0;}
 .cover_btn a{flex:50%;border:1px solid #808080;border-radius:2px;padding:.25em;background:#ccc;}
 #i-cov{fill:#595959;width:1.5em;}
-.lang_btn{margin:3em;outline:none;}
-.lang_btn a{border-radius:3px;border:none;padding:.75em;height:2em;background:#4B0080;color:#ccc;text-decoration:none;
+.lang_btn{margin:3em;}
+.lang_btn a{border-radius:3px;border:none;padding:.75em 2em;height:2em;background:#4B0080;color:#ccc;text-decoration:none;
 box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
-.lang_btn:active{transform:translateY:4px;}
 .line_one{font-family:'Raleway',sans-serif;text-transform:uppercase;font-size:1.65em;}
 .line_two{font-family:'Comforter',cursive;font-size:1.5em;border-top:3px solid #595959;padding:.75em 0;}
 .stretch_it{white-space:nowrap;}
 .justify{text-align:justify;}
 
 .main_wrap{display:flex;flex-flow:column;}
-.main_left_wrap{height:100vh;height: calc(var(--vh, 1vh) * 100);}
-.main_name_mob{display:flex;flex:10%;align-items:center;padding:.5rem 1.5em;color:#f2f2f2;border-bottom:1px solid #595959;border-top:1px solid #595959;}
+.page_2{height:calc(var(--vh, 1vh) * 100);border-bottom:1px solid #595959;}
+.main_name_mob{display:flex;flex:10%;padding:.5rem 1.5em;color:#f2f2f2;border-bottom:1px solid #595959;border-top:1px solid #595959;}
 .main_name_mob_l{font-family:'Playfair Display',serif;font-size:2em;border-right:2px solid #f2f2f2;justify-content:right;padding-right:.5em;}
 .main_name_mob_r{font-family:Gruppo,cursive;padding-left:.5em;}
 .main_name{display:none;}
 
-.main_left{display:flex;flex:90%;position:relative;}
-.main_left img{max-width:90vw;border:1px solid red;margin:18px;}
-.main_left_text{color:#f2f2f2;position:absolute;top:0%;bottom:0%;width:100vw;background:rgba(0,0,0,.1);padding:9em 1em 1em 1em;font-size:2em;}
+.main_left{display:flex;flex:90%;flex-flow:column;color:#f2f2f2;padding:1em;font-size:2em;font-family:'Prosto One',cursive}
+.main_left img{max-width:90vw;border:1px solid #4B0080;margin:18px;}
 
 .page_3{display:flex;flex-flow:column;align-items:center;justify-content:center;height:calc(var(--vh, 1vh) * 100);padding:1em 0;}
 .about-icon{display:flex;justify-content:center;align-items:center;padding:3px;width:2.5em;height:2.5em;background:#800060;border-radius:50%;}
@@ -109,16 +108,16 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 
 
 <div class="main_wrap">
-  <div class="main_left_wrap">
+<div class="page_2">
     <div class="main_name_mob">
       <div class="main_name_mob_l"><span>B.P.R.</span></div>
 	  <div class="main_name_mob_r"><span>Billing<br>Payments<br>Reports</span></div>
     </div>
     <div class="main_left">
-	  <img src="images/bgr_2.jpg">
-      <div class="main_left_text"><span style="font-size:.75em;color:#fff;">Ваш бухгалтер</span><br><span style="font-family:'Prosto One',cursive">Инна Иващенко</span></div>
+	  <div><img src="images/bgr_2.jpg"></div>
+      <div><span style="font-size:.75em;color:#fff;font-family:'Poiret One',cursive;">Ваш бухгалтер</span><br><span>Инна Иващенко</span></div>
     </div>
-  </div>
+</div>
   
   <div class="page_3">
 	<div class="about-info">
