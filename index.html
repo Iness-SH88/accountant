@@ -39,8 +39,7 @@ box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0
 .main_name{display:none;}
 
 .main_left{display:flex;flex:90%;flex-flow:column;color:#f2f2f2;padding:1em;font-size:2em;font-family:'Prosto One',cursive}
-.main_left img{max-width:90vw;border:1px solid #4B0080;margin:18px;}
-
+.portrait img{max-width:80vw;border:1px solid #4B0080;margin:18px;}
 .page_3{display:flex;flex-flow:column;align-items:center;justify-content:center;height:calc(var(--vh, 1vh) * 100);padding:1em 0;}
 .about-icon{display:flex;justify-content:center;align-items:center;padding:3px;width:2.5em;height:2.5em;background:#800060;border-radius:50%;}
 .about-info{display:flex;flex-flow:column;align-items:center;font-family:'Oswald',sans-serif;margin:1em;padding:1em;
@@ -49,7 +48,7 @@ border-radius:0 0 7px 7px;border:1px solid #800060;border-top:none;}
 #layer{fill:#bfbfbf;width:1.5em;height:1.5em;}
 
 .main_right{color:#e6e6e6;}
-.main_choice{font-family:'Prosto One',cursive;position:absolute;z-index:1;width:100%;top:30vh;padding:18px;text-align:center;font-size:3.5em;}
+.main_choice{font-family:'Prosto One',cursive;position:absolute;z-index:1;width:100%;top:25vh;padding:18px;text-align:center;font-size:3.5em;}
 .main_choice>p{margin:0;}
 .upCase{text-transform:uppercase;}
 .choice_text{font-size:.25em;color:#737373;}
@@ -64,10 +63,10 @@ display:flex;justify-content:center;align-items:center;}
 #but_3{animation:size_3 9s infinite;}
 @keyframes size_3{0%{transform:scale(1);}40%{transform:scale(1);}50%{transform:scale(1.05);}60%{transform:scale(1);}100%{transform:scale(1);}}
 .group:hover{animation:none;}
-.choice_bgr_wrap{height: calc(var(--vh, 1vh) * 100);position:relative;border-bottom:1px solid #595959;}
-.choice_bgr{overflow:hidden;padding:1em;border:1px solid #4B0080;}
-#padRight{margin:36px 25vw 0 0;border-left:none;height:40vh;background:linear-gradient(to right bottom,#1e0033,#000);}
-#padLeft{margin:20vh 0 36px 25vw;border-right:none;height:35vh;background:linear-gradient(to right bottom,#000,#2d004d);}
+.choice_bgr_wrap{height:calc(var(--vh, 1vh) * 100);position:relative;border-bottom:1px solid #595959;}
+.choice_bgr{border:1px solid #4B0080;height:35vh;}
+#padRight{margin:18px 25vw 0 0;border-left:none;background:linear-gradient(to right bottom,#1e0033,#000);}
+#padLeft{margin:20vh 0 18px 25vw;border-right:none;background:linear-gradient(to right bottom,#000,#2d004d);}
 
 .f_wrap{height: calc(var(--vh, 1vh) * 100);}
 .footer{height:70%;display:flex;align-items:center;justify-content:center;background-image:url("images/bgr_1.jpg");background-size:cover;
@@ -114,7 +113,7 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 	  <div class="main_name_mob_r"><span>Billing<br>Payments<br>Reports</span></div>
     </div>
     <div class="main_left">
-	  <div><img src="images/bgr_2.jpg"></div>
+	  <div class="portrait"><img src="images/bgr_2.jpg"></div>
       <div><span style="font-size:.75em;color:#fff;font-family:'Poiret One',cursive;">Ваш бухгалтер</span><br><span>Инна Иващенко</span></div>
     </div>
 </div>
