@@ -18,17 +18,17 @@ body{margin:0;height:100%;font-family:'Poiret One',cursive;font-size:18px;backgr
 #logoLine{flex:100%;font-family:'Playfair Display',serif;font-size:6em;border-bottom:2px solid #000;}
 .cover_line{font-family:Gruppo,cursive;font-size:3em;}
 .text-hidden{display:none;}
-.lines-hidden{transform:translateY(90vh);opacity:0;}
+.cover_text{width:calc(75vw-36px);}
 .cover_text>p{margin:0;}
+.line_one{font-family:'Raleway',sans-serif;text-transform:uppercase;font-size:1.25em;}
+.line_two{font-family:'Comforter',cursive;font-size:1.25em;border-top:3px solid #595959;padding:.75em 0;}
+.stretch_it{white-space:nowrap;}
+.justify{text-align:justify;}
 .cover_btn{margin:3em 0 0 0;}
 .cover_btn a{flex:50%;border:1px solid #808080;border-radius:2px;padding:.25em;background:#ccc;}
 #i-cov{fill:#595959;width:1.5em;}
 .lang_btn{margin:3em 0;}
 .lang_btn a{border-radius:3px;border:none;padding:.75em 2em;height:2em;background:#4B0080;color:#ccc;text-decoration:none;box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
-.line_one{font-family:'Raleway',sans-serif;text-transform:uppercase;font-size:1.65em;}
-.line_two{font-family:'Comforter',cursive;font-size:1.5em;border-top:3px solid #595959;padding:.75em 0;}
-.stretch_it{white-space:nowrap;}
-.justify{text-align:justify;}
 
 .page_2{height:calc(var(--vh, 1vh) * 100);}
 .main_name_mob{flex:10%;padding:.5rem 1.5em;color:#f2f2f2;border-bottom:1px solid #595959;border-top:1px solid #595959;}
@@ -81,13 +81,13 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
   <div class="cover">
     <div class="cover_name">
 	  <p class="cover_line" id="logoLine">B.P.R.</p>
-	  <p class="cover_line lines-hidden">Billing</p>
-	  <p class="cover_line lines-hidden">Payments</p>
-	  <p class="cover_line lines-hidden">Reports</p>
+	  <p class="cover_line text-hidden">Billing</p>
+	  <p class="cover_line text-hidden">Payments</p>
+	  <p class="cover_line text-hidden">Reports</p>
 	</div>
 	<div class="cover_text ">
 	<p class="stretch line_one text-hidden">Бухгалтерские</p>
-	<p class="stretch line_one text-hidden" style="font-size:3em;">услуги</p>
+	<p class="stretch line_one text-hidden" style="font-size:2.5em;">услуги</p>
 	<p class="stretch line_two text-hidden">для ФЛП в Украине</p>
 	</div>
 	<div class="cover_btn centering text-hidden">
@@ -224,9 +224,9 @@ window.onload = function() {
     var timer = setInterval(function () {
         i--;
     
-    if (i == 4) {line[1].classList.remove("lines-hidden");}
-    if (i == 3) {line[2].classList.remove("lines-hidden");}
-	if (i == 2) {line[3].classList.remove("lines-hidden");}
+    if (i == 4) {line[1].classList.remove("text-hidden");}
+    if (i == 3) {line[2].classList.remove("text-hidden");}
+	if (i == 2) {line[3].classList.remove("text-hidden");}
 	if (i == 1) {
 	line[0].style.display="none";
 	line[1].style.display="none";
