@@ -48,9 +48,9 @@ border-radius:0 0 7px 7px;border:1px solid #800060;border-top:none;}
 #layer{fill:#bfbfbf;width:1.5em;height:1.5em;}
 
 .main_right{color:#e6e6e6;}
-.choice_bgr_wrap{border-bottom:1px solid #595959;border-top:1px solid #595959;height:100vh;
+.choice_bgr_wrap{border-bottom:1px solid #595959;border-top:1px solid #595959;
 background:linear-gradient(to left top,transparent,transparent,#2d004d),linear-gradient(to right bottom,#000,#000,#2d004d);}
-.main_choice{font-family:'Prosto One',cursive;padding:25vh 18px 18px 18px;text-align:center;font-size:3.5em;}
+.main_choice{height:100vh;font-family:'Prosto One',cursive;padding:25vh 18px 18px 18px;text-align:center;font-size:3.5em;}
 .main_choice>p{margin:0;}
 .upCase{text-transform:uppercase;}
 .choice_text{font-size:.25em;color:#737373;}
@@ -78,7 +78,8 @@ box-shadow:12px 12px 16px 0 rgba(255,255,255,.25) inset, -8px -8px 12px 0 rgba(0
 input[type=text]{padding:.5em;width:80vw;border:none;border-radius:3px;background:#ccc;}
 .price{width:80vw;margin:2em 0;text-align:center;border-radius:3px;border:none;padding:1em 2em;background:#4B0080;
 box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
-.cross-wrap{width:2em;height:2em;background:transparent;border:none;cursor:pointer;}
+.cross-wrap{margin-bottom:5em;width:2em;height:2em;background:transparent;border:none;cursor:pointer;}
+._one{margin-bottom:15em;}
 
 .f_wrap{height:100vh;}
 .footer{height:70%;background-image:url("images/bgr_1.jpg");background-size:cover;border-bottom:1px solid #595959;}
@@ -178,7 +179,7 @@ margin:3em 0;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;min-w
 	</form>
 	</div>
 	<div class="price"><strong><span id="total"></span></strong></div>
-	<button class="cross-wrap centering" onclick="groupOneClose()"><img src="images/out.png"></button>
+	<button class="cross-wrap _one centering" onclick="groupOneClose()"><img src="images/out.png"></button>
 </div>
 
 <div class="group-wrap centering hide" id="group-two">
@@ -360,12 +361,6 @@ document.getElementById("group-three").classList.add("hide");
 </script>
 
 <script>
-//Изменить высоту страницы
-var el = document.getElementsByTagName("input");
-el.addEventListener("touchstart", changeHeight);
-function changeHeight(){
-document.getElementsByClassName("choice_bgr_wrap")[0].style.height=auto;
-}
 //Формирование стоимости услуг
 document.getElementById("total").innerHTML = 'Отметьте нужные услуги';
 document.getElementById("totalTwo").innerHTML = 'Отметьте нужные услуги';
