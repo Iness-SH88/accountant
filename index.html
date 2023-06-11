@@ -62,13 +62,12 @@ box-shadow:12px 12px 16px 0 rgba(255,255,255,.25) inset, -8px -8px 12px 0 rgba(0
 #but_3{animation:size_3 9s infinite;}
 @keyframes size_3{0%{transform:scale(1);}40%{transform:scale(1);}50%{transform:scale(1.05);}60%{transform:scale(1);}100%{transform:scale(1);}}
 
-.group-wrap{flex-flow:column;padding:2em;height:calc(var(--vh, 1vh) * 100);scroll-padding-block-start:0;}
-#group-one{padding-top:10vh;}
-.name-wrap{width:70vw;font-family:'Prosto One',cursive;text-transform:uppercase;}
+.group-wrap{flex-flow:column;padding:2em;}
+.name-wrap{width:100%;font-family:'Prosto One',cursive;text-transform:uppercase;}
 .name-wrap>p{margin:0;}
-.line-1{font-size:3em;}
+.line-1{font-size:3.5em;}
 .line-2{display:flex;align-items:center;font-size:1.5em;color:#999;}
-#line-2-r{font-family:'Comforter',cursive;text-transform:none;font-size:1em;color:#4B0080;margin-left:.25em;}
+#line-2-r{font-family:'Comforter',cursive;text-transform:none;font-size:1.25em;color:#4B0080;margin-left:.25em;}
 .list-wrap{display:flex;flex-flow:column;}
 .row-wrap{display:flex;flex-flow:row;align-items:center;}
 .list-btn{width:2em;height:2em;border-radius:50%;background:#ccc;cursor:pointer;margin-right:1em;}
@@ -76,7 +75,7 @@ box-shadow:12px 12px 16px 0 rgba(255,255,255,.25) inset, -8px -8px 12px 0 rgba(0
 .hide{display:none;}
 .item{font-family:'Oswald',sans-serif;font-size:1.25em;}
 input[type=text]{padding:.5em;width:100%;border:none;border-radius:3px;background:#ccc;}
-.price{width:80vw;margin:2em 0;text-align:center;border-radius:3px;border:none;padding:1em 2em;background:#4B0080;
+.price{width:100%;margin:2em 0;text-align:center;border-radius:3px;border:none;padding:1em 2em;background:#4B0080;
 box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
 .cross-wrap{width:2em;height:2em;background:transparent;border:none;cursor:pointer;}
 
@@ -156,7 +155,7 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 	  </div>	  
 	</div>
 		
-<div class="group-wrap centering hide" id="group-one">
+<div class="group-wrap centering hide">
 	<div class="name-wrap">
 		<p class="line-1 stretch">первая</p>
 		<p class="line-2"><span>группа</span><span id="line-2-r">единого налога</span></p>
