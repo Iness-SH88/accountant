@@ -38,18 +38,18 @@ height:calc(var(--vh, 1vh) * 100);text-align:center;}
 .main_left{display:flex;flex-flow:column;align-items:center;flex:90%;color:#ccc;background:linear-gradient(#1a1a1a,#000);padding:1.75em .5em .5em .5em;font-size:2em;font-family:'Prosto One',cursive;}
 .portrait img{max-width:80vw;border:3px solid #262626;border-radius:50% 50% 0% 0%;}
 
-.page_3{display:flex;flex-flow:column;align-items:center;min-height:calc(var(--vh, 1vh) * 100);scroll-padding-block-start: 0;}
+.page_3{display:flex;flex-flow:column;align-items:center;min-height:calc(var(--vh, 1vh) * 100);scroll-padding-block-start:0;}
 .page_3:nth-child(2){height:30%;}
 .about-icon{padding:3px;width:2.5em;height:2.5em;background:#800060;border-radius:50%;}
 .about-info{display:flex;align-items:center;flex-flow:column;font-family:'Oswald',sans-serif;margin:.75em;padding:.75em;
-min-height:25vh;;width:80vw;text-align:center;background:linear-gradient(120deg,#262626,#1a1a1a,#000);color:#bfbfbf;font-size:1.5em;
+min-height:25vh;width:80vw;text-align:center;background:linear-gradient(120deg,#262626,#1a1a1a,#000);color:#bfbfbf;font-size:1.5em;
 border-radius:0 0 7px 7px;border:1px solid #800060;border-top:none;}
 #layer{fill:#bfbfbf;width:1.5em;height:1.5em;}
 
 .main_right{color:#e6e6e6;}
-.choice_bgr_wrap{height:calc(var(--vh, 1vh) * 100);scroll-padding-block-start: 0;position:relative;border-bottom:1px solid #595959;background:linear-gradient(to right bottom,#000,#000,#2d004d);}
-.choice_bgr{height:35%;margin:18px 25vw 0 0;border:2px solid #4B0080;border-left:none;border-radius:0% 100% 0% 0%;background:linear-gradient(to right bottom,#2d004d,#000);}
-.main_choice{font-family:'Prosto One',cursive;position:absolute;z-index:3;width:100%;top:25vh;padding:18px;text-align:center;font-size:3.5em;}
+.choice_bgr_wrap{height:calc(var(--vh, 1vh) * 100);scroll-padding-block-start:0;border-bottom:1px solid #595959;border-top:1px solid #595959;
+background:linear-gradient(to left top,transparent,transparent,#2d004d),linear-gradient(to right bottom,#000,#000,#2d004d);}
+.main_choice{font-family:'Prosto One',cursive;padding:25vh 18px 18px 18px;text-align:center;font-size:3.5em;}
 .main_choice>p{margin:0;}
 .upCase{text-transform:uppercase;}
 .choice_text{font-size:.25em;color:#737373;}
@@ -62,7 +62,23 @@ box-shadow:12px 12px 16px 0 rgba(255,255,255,.25) inset, -8px -8px 12px 0 rgba(0
 #but_3{animation:size_3 9s infinite;}
 @keyframes size_3{0%{transform:scale(1);}40%{transform:scale(1);}50%{transform:scale(1.05);}60%{transform:scale(1);}100%{transform:scale(1);}}
 
-.f_wrap{height:calc(var(--vh, 1vh) * 100);scroll-padding-block-start: 0;}
+.group-wrap{flex-flow:column;padding:4em 3em;}
+#group-one{padding-top:20vh;}
+.name-wrap{width:70vw;font-family:'Prosto One',cursive;text-transform:uppercase;}
+.line-1{font-size:5em;}
+.line-2{display:flex;align-items:center;font-size:2.5em;color:#999;}
+#line-2-r{font-family:'Comforter',cursive;text-transform:none;color:#4B0080;margin-left:.25em;}
+.list-wrap{margin-top:2em;display:flex;flex-flow:column;}
+.row-wrap{display:flex;flex-flow:row;align-items:center;}
+.list-btn{width:2em;height:2em;border-radius:50%;background:#ccc;cursor:pointer;margin-right:1em;}
+.red{border:2px solid red;}.green{border:2px solid green;}
+.hide{display:none;}
+.item{font-family:'Oswald',sans-serif;font-size:1.25em;}
+input[type=text]{padding:.5em;width:100%;border:none;border-radius:3px;background:#ccc;}
+.price{width:60vw;margin:3em 0;text-align:center;border-radius:3px;border:none;padding:1em 2em;background:#4B0080;box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
+.cross-wrap{width:2em;height:2em;background:transparent;border:none;cursor:pointer;}
+
+.f_wrap{height:calc(var(--vh, 1vh) * 100);scroll-padding-block-start:0;}
 .footer{height:70%;background-image:url("images/bgr_1.jpg");background-size:cover;border-bottom:1px solid #595959;}
 .contact{font-family:'Oswald',sans-serif;color:#000;font-size:1.2em;display:flex;flex-flow:column;justify-content:center;align-items:center;padding:1em;
 background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
@@ -126,18 +142,121 @@ background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
   
   <div class="main_right">
 	<div class="choice_bgr_wrap">
-	<div class="choice_bgr"></div>
+	
 	<div class="main_choice">
 	<p class="upCase stretch" style="font-size:.45em;color:#999;">Ваша группа</p>
 	<p class="upCase stretch">единого<br>налога?</p>
 	<p class="choice_text">Узнайте стоимость <span>услуг </span>в два клика</p>
 	  <div class="centering">
-	  <button class="group centering" id="but_1">1</button>
-	  <button class="group centering" id="but_2">2</button>
-	  <button class="group centering" id="but_3">3</button>
+	  <button class="group centering" id="but_1" onclick="groupOneOpen()">1</button>
+	  <button class="group centering" id="but_2" onclick="groupTwoOpen()">2</button>
+	  <button class="group centering" id="but_3" onclick="groupThreeOpen()">3</button>
 	  </div>	  
 	</div>
+		
+<div class="group-wrap centering hide" id="group-one">
+	<div class="name-wrap">
+		<div class="line-1 stretch">первая</div>
+		<div class="line-2"><span>группа</span><span id="line-2-r">единого налога</span></div>
 	</div>
+	<div class="list-wrap">
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-1-r" onclick="reportAdd()"></button>
+	<button class="list-btn green centering hide" id="list-1-g" onclick="reportRemove()"><img src="images/check.svg"></button>
+	<p class="item">отчетность + уплата налогов и сборов</p>
+	</div>
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-2-r" onclick="billAdd()"></button>
+	<button class="list-btn red hide" id="list-2-rr" onclick="billCalc()"></button>
+	<button class="list-btn green centering hide" id="list-2-g" onclick="billRemove()"><img src="images/check.svg"></button>
+	<p class="item">счета + расходные накладные/акты выполненных работ</p>
+	</div>
+	<form id="formBill">
+	<input class="hide" type="text" id="bill-number" placeholder='сначала введите количество'>
+	</form>
+	</div>
+	<div class="price"><strong><span id="total"></span></strong></div>
+	<button class="cross-wrap centering" onclick="groupOneClose()"><img src="images/out.png"></button>
+</div>
+
+<div class="group-wrap centering hide" id="group-two">
+	<div class="name-wrap">
+		<div class="line-1 stretch">вторая</div>
+		<div class="line-2"><span>группа</span><span id="line-2-r">единого налога</span></div>
+	</div>
+	<div class="list-wrap">
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-1-r-two" onclick="reportAddTwo()"></button>
+	<button class="list-btn green centering hide" id="list-1-g-two" onclick="reportRemoveTwo()"><img src="images/check.svg"></button>
+	<p class="item">отчетность + уплата налогов и сборов</p>
+	</div>
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-2-r-two" onclick="billAddTwo()"></button>
+	<button class="list-btn red hide" id="list-2-rr-two" onclick="billCalcTwo()"></button>
+	<button class="list-btn green centering hide" id="list-2-g-two" onclick="billRemoveTwo()"><img src="images/check.svg"></button>
+	<p class="item">счета + расходные накладные/акты выполненных работ</p>
+	</div>
+	<form id="formBillTwo">
+	<input class="hide" type="text" id="bill-number-two" placeholder='сначала введите количество'>
+	</form>
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-3-r-two" onclick="workerAdd()"></button>
+	<button class="list-btn red hide" id="list-3-rr-two" onclick="workerCalc()"></button>
+	<button class="list-btn green centering hide" id="list-3-g-two" onclick="workerRemove()"><img src="images/check.svg"></button>
+	<p class="item">зарплата наемных рабочих <span style="font-size:.75em">(табель, выплата, отчетность)</span></p>
+	</div>
+	<form id="formWorker">
+	<input class="hide" type="text" id="worker-number" placeholder='сначала введите количество'>
+	</form>
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-4-r-two" onclick="bookAdd()"></button>
+	<button class="list-btn green centering hide" id="list-4-g-two" onclick="bookRemove()"><img src="images/check.svg"></button>
+	<p class="item">электронная книга доходов</p>
+	</div>
+	</div>
+	<div class="price"><strong><span id="totalTwo"></span></strong></div>
+	<button class="cross-wrap centering" onclick="groupTwoClose()"><img src="images/out.png"></button>
+</div>
+
+<div class="group-wrap centering hide" id="group-three">
+	<div class="name-wrap">
+		<div class="line-1 stretch">третья</div>
+		<div class="line-2"><span>группа</span><span id="line-2-r">единого налога</span></div>
+	</div>
+	<div class="list-wrap">
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-1-r-three" onclick="reportAddThree()"></button>
+	<button class="list-btn green centering hide" id="list-1-g-three" onclick="reportRemoveThree()"><img src="images/check.svg"></button>
+	<p class="item">отчетность + уплата налогов и сборов</p>
+	</div>
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-2-r-three" onclick="billAddThree()"></button>
+	<button class="list-btn red hide" id="list-2-rr-three" onclick="billCalcThree()"></button>
+	<button class="list-btn green centering hide" id="list-2-g-three" onclick="billRemoveThree()"><img src="images/check.svg"></button>
+	<p class="item">счета + расходные накладные/акты выполненных работ</p>
+	</div>
+	<form id="formBillThree">
+	<input class="hide" type="text" id="bill-number-three" placeholder='сначала введите количество'>
+	</form>
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-3-r-three" onclick="workerAddThree()"></button>
+	<button class="list-btn red hide" id="list-3-rr-three" onclick="workerCalcThree()"></button>
+	<button class="list-btn green centering hide" id="list-3-g-three" onclick="workerRemoveThree()"><img src="images/check.svg"></button>
+	<p class="item">зарплата наемных рабочих <span style="font-size:.75em">(табель, выплата, отчетность)</span></p>
+	</div>
+	<form id="formWorkerThree">
+	<input class="hide" type="text" id="worker-number-three" placeholder='сначала введите количество'>
+	</form>
+	<div class="row-wrap">
+	<button class="list-btn red" id="list-4-r-three" onclick="bookAddThree()"></button>
+	<button class="list-btn green centering hide" id="list-4-g-three" onclick="bookRemoveThree()"><img src="images/check.svg"></button>
+	<p class="item">электронная книга доходов</p>
+	</div>
+	</div>
+	<div class="price"><strong><span id="totalThree"></span></strong></div>
+	<button class="cross-wrap centering" onclick="groupThreeClose()"><img src="images/out.png"></button>
+</div>
+</div>
 		
 	<div class="f_wrap">
 	<div class="footer centering">
@@ -208,6 +327,214 @@ $(document).ready(function() {
     $(this).strech_text();
   });
 });
+</script>
+
+<script>
+//Выбор группы
+function groupOneOpen(){
+document.getElementsByClassName("main_choice")[0].classList.add("hide");
+document.getElementById("group-one").classList.remove("hide");
+}
+function groupOneClose(){
+document.getElementsByClassName("main_choice")[0].classList.remove("hide");
+document.getElementById("group-one").classList.add("hide");
+}
+function groupTwoOpen(){
+document.getElementsByClassName("main_choice")[0].classList.add("hide");
+document.getElementById("group-two").classList.remove("hide");
+}
+function groupTwoClose(){
+document.getElementsByClassName("main_choice")[0].classList.remove("hide");
+document.getElementById("group-two").classList.add("hide");
+}
+function groupThreeOpen(){
+document.getElementsByClassName("main_choice")[0].classList.add("hide");
+document.getElementById("group-three").classList.remove("hide");
+}
+function groupThreeClose(){
+document.getElementsByClassName("main_choice")[0].classList.remove("hide");
+document.getElementById("group-three").classList.add("hide");
+}
+</script>
+
+<script>
+//Формирование стоимости услуг
+document.getElementById("total").innerHTML = 'Отметьте нужные услуги';
+document.getElementById("totalTwo").innerHTML = 'Отметьте нужные услуги';
+document.getElementById("totalThree").innerHTML = 'Отметьте нужные услуги';
+var report = 0; var bill = 0; var billNum;
+var reportTwo = 0; var billTwo = 0; var billNumTwo; var worker = 0; var workerNum; var book = 0;
+var reportThree = 0; var billThree = 0; var billNumThree; var workerThree = 0; var workerNumThree; var bookThree = 0;
+//Стоимость отчетности для 1 группы
+function reportAdd(){
+document.getElementById("list-1-r").classList.add("hide");
+document.getElementById("list-1-g").classList.remove("hide");
+report = 250;
+document.getElementById("total").innerHTML = report+bill+' грн. /мес.';
+}
+function reportRemove(){
+document.getElementById("list-1-g").classList.add("hide");
+document.getElementById("list-1-r").classList.remove("hide");
+report = 0;
+document.getElementById("total").innerHTML = report+bill+' грн. /мес.';
+}
+//Стоимость выписки счетов для 1 группы
+function billAdd(){
+document.getElementById("list-2-r").classList.add("hide");
+document.getElementById("list-2-rr").classList.remove("hide");
+document.getElementById("bill-number").classList.remove("hide");
+}
+function billCalc(){
+document.getElementById("list-2-rr").classList.add("hide");
+document.getElementById("list-2-g").classList.remove("hide");
+var billNum = document.getElementById("bill-number").value;
+bill = billNum*40;
+document.getElementById("total").innerHTML = report+bill+' грн. /мес.';
+}
+function billRemove(){
+document.getElementById("list-2-g").classList.add("hide");
+document.getElementById("list-2-r").classList.remove("hide");
+document.getElementById("bill-number").classList.add("hide");
+bill = 0;
+document.getElementById("formBill").reset();
+document.getElementById("total").innerHTML = report+bill+' грн. /мес.';
+}
+//Стоимость отчетности для 2 группы
+function reportAddTwo(){
+document.getElementById("list-1-r-two").classList.add("hide");
+document.getElementById("list-1-g-two").classList.remove("hide");
+reportTwo = 450;
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
+}
+function reportRemoveTwo(){
+document.getElementById("list-1-g-two").classList.add("hide");
+document.getElementById("list-1-r-two").classList.remove("hide");
+reportTwo = 0;
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
+}
+//Стоимость выписки счетов для 2 группы
+function billAddTwo(){
+document.getElementById("list-2-r-two").classList.add("hide");
+document.getElementById("list-2-rr-two").classList.remove("hide");
+document.getElementById("bill-number-two").classList.remove("hide");
+}
+function billCalcTwo(){
+document.getElementById("list-2-rr-two").classList.add("hide");
+document.getElementById("list-2-g-two").classList.remove("hide");
+var billNumTwo = document.getElementById("bill-number-two").value;
+billTwo = billNumTwo*40;
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
+}
+function billRemoveTwo(){
+document.getElementById("list-2-g-two").classList.add("hide");
+document.getElementById("list-2-r-two").classList.remove("hide");
+document.getElementById("bill-number-two").classList.add("hide");
+billTwo = 0;
+document.getElementById("formBillTwo").reset();
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
+}
+//Стоимость зарплатного проекта для 2 группы
+function workerAdd(){
+document.getElementById("list-3-r-two").classList.add("hide");
+document.getElementById("list-3-rr-two").classList.remove("hide");
+document.getElementById("worker-number").classList.remove("hide");
+}
+function workerCalc(){
+document.getElementById("list-3-rr-two").classList.add("hide");
+document.getElementById("list-3-g-two").classList.remove("hide");
+var workerNum = document.getElementById("worker-number").value;
+worker = workerNum*300;
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
+}
+function workerRemove(){
+document.getElementById("list-3-g-two").classList.add("hide");
+document.getElementById("list-3-r-two").classList.remove("hide");
+document.getElementById("worker-number").classList.add("hide");
+worker = 0;
+document.getElementById("formWorker").reset();
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
+}
+//Стоимость книги доходов для 2 группы
+function bookAdd(){
+document.getElementById("list-4-r-two").classList.add("hide");
+document.getElementById("list-4-g-two").classList.remove("hide");
+book = 300;
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
+}
+function bookRemove(){
+document.getElementById("list-4-g-two").classList.add("hide");
+document.getElementById("list-4-r-two").classList.remove("hide");
+book = 0;
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
+}
+//Стоимость отчетности для 3 группы
+function reportAddThree(){
+document.getElementById("list-1-r-three").classList.add("hide");
+document.getElementById("list-1-g-three").classList.remove("hide");
+reportThree = 500;
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
+}
+function reportRemoveThree(){
+document.getElementById("list-1-g-three").classList.add("hide");
+document.getElementById("list-1-r-three").classList.remove("hide");
+reportThree = 0;
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
+}
+//Стоимость выписки счетов для 3 группы
+function billAddThree(){
+document.getElementById("list-2-r-three").classList.add("hide");
+document.getElementById("list-2-rr-three").classList.remove("hide");
+document.getElementById("bill-number-three").classList.remove("hide");
+}
+function billCalcThree(){
+document.getElementById("list-2-rr-three").classList.add("hide");
+document.getElementById("list-2-g-three").classList.remove("hide");
+var billNumThree = document.getElementById("bill-number-three").value;
+billThree = billNumThree*40;
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
+}
+function billRemoveThree(){
+document.getElementById("list-2-g-three").classList.add("hide");
+document.getElementById("list-2-r-three").classList.remove("hide");
+document.getElementById("bill-number-three").classList.add("hide");
+billThree = 0;
+document.getElementById("formBillThree").reset();
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
+}
+//Стоимость зарплатного проекта для 3 группы
+function workerAddThree(){
+document.getElementById("list-3-r-three").classList.add("hide");
+document.getElementById("list-3-rr-three").classList.remove("hide");
+document.getElementById("worker-number-three").classList.remove("hide");
+}
+function workerCalcThree(){
+document.getElementById("list-3-rr-three").classList.add("hide");
+document.getElementById("list-3-g-three").classList.remove("hide");
+var workerNumThree = document.getElementById("worker-number-three").value;
+workerThree = workerNumThree*300;
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
+}
+function workerRemoveThree(){
+document.getElementById("list-3-g-three").classList.add("hide");
+document.getElementById("list-3-r-three").classList.remove("hide");
+document.getElementById("worker-number-three").classList.add("hide");
+workerThree = 0;
+document.getElementById("formWorkerThree").reset();
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
+}
+//Стоимость книги доходов для 3 группы
+function bookAddThree(){
+document.getElementById("list-4-r-three").classList.add("hide");
+document.getElementById("list-4-g-three").classList.remove("hide");
+bookThree = 300;
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
+}
+function bookRemoveThree(){
+document.getElementById("list-4-g-three").classList.add("hide");
+document.getElementById("list-4-r-three").classList.remove("hide");
+bookThree = 0;
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
+}
 </script>
 
 </body>
