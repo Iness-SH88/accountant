@@ -80,10 +80,10 @@ input[type=text]{padding:.5em;width:80vw;border:none;border-radius:3px;backgroun
 box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
 .cross-wrap{width:2em;height:2em;background:transparent;border:none;cursor:pointer;}
 
-.f_wrap{height:100%;}
+.f_wrap{height:100vh;}
 .footer{height:70%;background-image:url("images/bgr_1.jpg");background-size:cover;border-bottom:1px solid #595959;}
 .contact{font-family:'Oswald',sans-serif;color:#000;font-size:1.2em;display:flex;flex-flow:column;justify-content:center;align-items:center;
-margin:5em 0;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
+margin:3em 0;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
 .contact-icon,.contact-info{padding:.25em 1em;}
 .contact a{width:1.5em;height:1.5em;}
 #i-foot{width:1.5em;}
@@ -360,6 +360,12 @@ document.getElementById("group-three").classList.add("hide");
 </script>
 
 <script>
+//Изменить высоту страницы
+var el = document.getElementsByTagName("input");
+el.addEventListener("touchstart", changeHeight);
+function changeHeight(){
+document.getElementsByClassName("choice_bgr_wrap")[0].style.height=auto;
+}
 //Формирование стоимости услуг
 document.getElementById("total").innerHTML = 'Отметьте нужные услуги';
 document.getElementById("totalTwo").innerHTML = 'Отметьте нужные услуги';
