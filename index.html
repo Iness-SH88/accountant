@@ -12,26 +12,23 @@
 *{box-sizing:border-box;}
 body{margin:0;font-family:'Poiret One',cursive;font-size:18px;background:#000;height:100%;overflow-x:hidden;}
 .centering{display:flex;justify-content:center;align-items:center;}
-.cover_frame{padding:10vh 3em 3em 3em;background-image:url("images/bgr_1.jpg");background-size:cover;scroll-padding-block-start:0;
-height:calc(var(--vh, 1vh) * 100);text-align:center;}
-.cover{height:60vh;width:75vw;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;text-align:center;}
-.cover_name{padding:0 3em;}
+.cover_frame{padding:10vh 5em;background-image:url("images/bgr_1.jpg");background-size:cover;scroll-padding-block-start:0;height:100vh;text-align:center;}
+.cover{height:60vh;padding:1em 3em;background:rgba(255,255,255,.8);border-radius:3px;text-align:center;}
 .cover_name>p{margin:0;}
 .cover_line{font-family:Gruppo,cursive;font-size:1.25em;}
 .cover_line:first-child{font-family:'Playfair Display',serif;font-size:3em;border-bottom:2px solid #000;}
 .cover_desc{font-size:1.25em;padding:1em;animation:app 7s 1;}
 #acnt{font-family:'Comforter',cursive;font-size:3em;}
 @keyframes app{from{color:transparent;}to{color:#000;}}
-.stretch_it{white-space:nowrap;}
-.justify{text-align:justify;}
+.stretch_it{white-space:nowrap;}.justify{text-align:justify;} /* Выравнивание текста по ширине блока */
 .cover_btn{margin:5em 0 0 0;}
 .cover_btn a{flex:50%;border:1px solid #808080;border-radius:2px;padding:.25em;background:#ccc;}
 #i-cov{fill:#595959;width:1.5em;}
 .lang_btn{margin:3em 0;}
-.lang_btn a{border-radius:3px;border:none;padding:.75em 2em;height:2em;background:#e67300;color:#fff;text-decoration:none;
+.lang_btn a{border-radius:3px;border:none;padding:.75em 2em;height:2em;width:100%;background:#e67300;color:#fff;text-decoration:none;
 box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
 
-.page_2{height:calc(var(--vh, 1vh) * 100);}
+.page_2{height:100vh;}
 .main_name_mob{flex:10%;padding:.5rem 1.5em;color:#f2f2f2;border-bottom:1px solid #595959;border-top:1px solid #595959;}
 .main_name_mob_l{font-family:'Playfair Display',serif;font-size:2em;border-right:2px solid #f2f2f2;justify-content:right;padding-right:.5em;}
 .main_name_mob_r{font-family:Gruppo,cursive;padding-left:.5em;}
@@ -39,7 +36,7 @@ box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0
 .main_left{display:flex;flex-flow:column;align-items:center;flex:90%;color:#ccc;background:linear-gradient(#1a1a1a,#000);padding:1.75em .5em .5em .5em;font-size:2em;font-family:'Prosto One',cursive;}
 .portrait img{max-width:80vw;border:3px solid #262626;border-radius:50% 50% 0% 0%;}
 
-.page_3{display:flex;flex-flow:column;align-items:center;min-height:calc(var(--vh, 1vh) * 100);}
+.page_3{display:flex;flex-flow:column;align-items:center;min-height:100vh;}
 .page_3:nth-child(2){height:30%;}
 .about-icon{padding:3px;width:2.5em;height:2.5em;background:#800060;border-radius:50%;}
 .about-info{display:flex;align-items:center;flex-flow:column;font-family:'Oswald',sans-serif;margin:.75em;padding:.75em;
@@ -48,11 +45,11 @@ border-radius:0 0 7px 7px;border:1px solid #800060;border-top:none;}
 #layer{fill:#bfbfbf;width:1.5em;height:1.5em;}
 
 .main_right{color:#e6e6e6;}
-.choice_bgr_wrap{border-bottom:1px solid #595959;border-top:1px solid #595959;
-background:linear-gradient(to left top,transparent,transparent,#2d004d),linear-gradient(to right bottom,#000,#000,#2d004d);}
-.main_choice{height:100vh;font-family:'Prosto One',cursive;padding:25vh 18px 18px 18px;text-align:center;font-size:3.5em;}
+.choice_bgr_wrap{border-bottom:1px solid #595959;border-top:1px solid #595959;background:linear-gradient(to left top,transparent,transparent,#2d004d),linear-gradient(to right bottom,#000,#000,#2d004d);}
+.main_choice{display:flex;flex-flow:column;align-items:center;height:100vh;font-family:'Prosto One',cursive;padding:25vh 18px 18px 18px;font-size:3.5em;}
 .main_choice>p{margin:0;}
-.upCase{text-transform:uppercase;}
+.upCase{text-transform:uppercase;width:80vw;margin:0 36px;background:red;text-align:center;}
+.upCase>p{margin:0;}
 .choice_text{font-size:.25em;color:#737373;}
 .group{font-size:2.5rem;color:#e600a8;width:30vw;height:3rem;cursor:pointer;border:none;outline:none;background:#800060;border-radius:5px;
 box-shadow:12px 12px 16px 0 rgba(255,255,255,.25) inset, -8px -8px 12px 0 rgba(0,0,0,.25) inset;margin:.75rem;padding:1em;}
@@ -84,8 +81,8 @@ box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0
 
 .f_wrap{height:100vh;}
 .footer{height:70%;background-image:url("images/bgr_1.jpg");background-size:cover;border-bottom:1px solid #595959;}
-.contact{font-family:'Oswald',sans-serif;color:#000;font-size:1.2em;display:flex;flex-flow:column;justify-content:center;align-items:center;
-margin:3em 0;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;min-width:65%;}
+.contact{width:100%;font-family:'Oswald',sans-serif;color:#000;font-size:1.2em;display:flex;flex-flow:column;justify-content:center;align-items:center;
+margin:0 5em;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;}
 .contact-icon,.contact-info{padding:.25em 1em;}
 .contact a{width:1.5em;height:1.5em;}
 #i-foot{width:1.5em;}
@@ -148,9 +145,12 @@ margin:3em 0;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;min-w
 <div class="choice_bgr_wrap">
 	
 	<div class="main_choice">
-	<p class="upCase stretch" style="font-size:.45em;color:#999;">Ваша группа</p>
-	<p class="upCase stretch">единого<br>налога?</p>
-	<p class="choice_text">Узнайте стоимость <span>услуг </span>в два клика</p>
+	<div class="upCase">
+	<p class="stretch" style="font-size:.45em;color:#999;">Ваша группа</p>
+	<p class="stretch">единого</p>
+	<p class="stretch">налога?</p>
+	</div>
+	<p class="choice_text">Узнайте стоимость услуг в два клика</p>
 	  <div class="centering">
 	  <button class="group centering" id="but_1" onclick="groupOneOpen()">1</button>
 	  <button class="group centering" id="but_2" onclick="groupTwoOpen()">2</button>
@@ -176,7 +176,7 @@ margin:3em 0;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;min-w
 	<p class="item">счета + расходные накладные/акты выполненных работ</p>
 	</div>
 	<form id="formBill">
-	<input class="hide" type="text" id="bill-number" placeholder='сначала введите количество'>
+	<input class="hide" type="text" id="bill-number" placeholder="сначала введите количество" maxlength="3">
 	</form>
 	<p class="hide field" id="bill-field">Очистить поле</p>
 	</div>
@@ -291,17 +291,6 @@ margin:3em 0;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;min-w
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-function init100vh(){
-  function setHeight(){
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-  setHeight();
-  window.addEventListener('resize', setHeight);
-}
-</script>
-
-<script>
 $.fn.strech_text = function() {
   var elmt = $(this),
     cont_width = elmt.width(),
@@ -379,8 +368,8 @@ report = 250;
 document.getElementById("total").innerHTML = report+bill+' грн. /мес.';
 }
 function reportRemove(){
-document.getElementById("list-1-g").classList.add("hide");
-document.getElementById("list-1-r").classList.remove("hide");
+document.getElementById("list-1-g").classList.toggle("hide");
+document.getElementById("list-1-r").classList.toggle("hide");
 report = 0;
 document.getElementById("total").innerHTML = report+bill+' грн. /мес.';
 }
@@ -390,8 +379,8 @@ document.getElementById("list-2-r").classList.add("hide");
 document.getElementById("list-2-rr").classList.remove("hide");
 document.getElementById("bill-number").classList.remove("hide");
 document.getElementById("bill-field").classList.remove("hide");
-//Разблокировка кнопки, если поле заполнено
-document.querySelector("#bill-number").addEventListener("click", (e) => {document.querySelector('#list-2-rr').removeAttribute("disabled");});
+//Разблокировать кнопку, если поле заполнено
+document.querySelector("#bill-number").addEventListener("keydown", (e) => {document.querySelector('#list-2-rr').removeAttribute("disabled");});
 }
 //Очистить поле
 document.querySelector("#bill-field").addEventListener("click", clearBillField);
@@ -414,10 +403,10 @@ bill = billNum*40;
 document.getElementById("total").innerHTML = report+bill+' грн. /мес.';
 }
 function billRemove(){
-document.getElementById("list-2-g").classList.add("hide");
-document.getElementById("list-2-r").classList.remove("hide");
-document.getElementById("bill-number").classList.add("hide");
-document.getElementById("bill-field").classList.add("hide");
+document.getElementById("list-2-g").classList.toggle("hide");
+document.getElementById("list-2-r").classList.toggle("hide");
+document.getElementById("bill-number").classList.toggle("hide");
+document.getElementById("bill-field").classList.toggle("hide");
 bill = 0;
 document.getElementById("formBill").reset();
 document.querySelector('#list-2-rr').setAttribute("disabled", "disabled");
