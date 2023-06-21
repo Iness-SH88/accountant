@@ -73,7 +73,7 @@ box-shadow:12px 12px 16px 0 rgba(255,255,255,.25) inset, -8px -8px 12px 0 rgba(0
 .hide{display:none;}
 .item{font-family:'Oswald',sans-serif;font-size:1.25em;}
 input[type=text]{padding:.5em;width:80vw;border:none;border-radius:3px;background:#ccc;}
-.field{font-weight:bold;font-size:.75em;cursor:pointer;}
+.field{font-weight:bold;font-size:.75em;cursor:pointer;color:#bfbfbf;}
 .price{width:80vw;margin:2em 0;text-align:center;border-radius:3px;border:none;padding:1em 2em;background:#4B0080;
 box-shadow:4px 4px 10px 0 rgba(255,255,255,.25) inset, -4px -4px 10px 0 rgba(0,0,0,.25) inset;}
 .cross-wrap{margin-bottom:5em;width:2em;height:2em;background:transparent;border:none;cursor:pointer;}
@@ -197,22 +197,24 @@ margin:0 5em;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;}
 	</div>
 	<div class="row-wrap">
 	<button class="list-btn red" id="list-2-r-two" onclick="billAddTwo()"></button>
-	<button class="list-btn red hide" id="list-2-rr-two" onclick="billCalcTwo()"></button>
+	<button class="list-btn red hide" id="list-2-rr-two" onclick="billCalcTwo()" disabled></button>
 	<button class="list-btn green centering hide" id="list-2-g-two" onclick="billRemoveTwo()"><img src="images/check.svg"></button>
 	<p class="item">счета + расходные накладные/акты выполненных работ</p>
 	</div>
 	<form id="formBillTwo">
-	<input class="hide" type="text" id="bill-number-two" placeholder='сначала введите количество'>
+	<input class="hide" type="text" id="bill-number-two" placeholder='сначала введите количество' maxlength="3">
 	</form>
+	<p class="hide field" id="bill-field-two">Очистить поле</p>
 	<div class="row-wrap">
 	<button class="list-btn red" id="list-3-r-two" onclick="workerAdd()"></button>
-	<button class="list-btn red hide" id="list-3-rr-two" onclick="workerCalc()"></button>
+	<button class="list-btn red hide" id="list-3-rr-two" onclick="workerCalc()" disabled></button>
 	<button class="list-btn green centering hide" id="list-3-g-two" onclick="workerRemove()"><img src="images/check.svg"></button>
 	<p class="item">зарплата наемных рабочих <span style="font-size:.75em">(табель, выплата, отчетность)</span></p>
 	</div>
 	<form id="formWorker">
-	<input class="hide" type="text" id="worker-number" placeholder='сначала введите количество'>
+	<input class="hide" type="text" id="worker-number" placeholder='сначала введите количество' maxlength="3">
 	</form>
+	<p class="hide field" id="worker-field">Очистить поле</p>
 	<div class="row-wrap">
 	<button class="list-btn red" id="list-4-r-two" onclick="bookAdd()"></button>
 	<button class="list-btn green centering hide" id="list-4-g-two" onclick="bookRemove()"><img src="images/check.svg"></button>
@@ -236,22 +238,24 @@ margin:0 5em;padding:1em;background:rgba(255,255,255,.8);border-radius:3px;}
 	</div>
 	<div class="row-wrap">
 	<button class="list-btn red" id="list-2-r-three" onclick="billAddThree()"></button>
-	<button class="list-btn red hide" id="list-2-rr-three" onclick="billCalcThree()"></button>
+	<button class="list-btn red hide" id="list-2-rr-three" onclick="billCalcThree()" disabled></button>
 	<button class="list-btn green centering hide" id="list-2-g-three" onclick="billRemoveThree()"><img src="images/check.svg"></button>
 	<p class="item">счета + расходные накладные/акты выполненных работ</p>
 	</div>
 	<form id="formBillThree">
-	<input class="hide" type="text" id="bill-number-three" placeholder='сначала введите количество'>
+	<input class="hide" type="text" id="bill-number-three" placeholder='сначала введите количество' maxlength="3">
 	</form>
+	<p class="hide field" id="bill-field-three">Очистить поле</p>
 	<div class="row-wrap">
 	<button class="list-btn red" id="list-3-r-three" onclick="workerAddThree()"></button>
-	<button class="list-btn red hide" id="list-3-rr-three" onclick="workerCalcThree()"></button>
+	<button class="list-btn red hide" id="list-3-rr-three" onclick="workerCalcThree()" disabled></button>
 	<button class="list-btn green centering hide" id="list-3-g-three" onclick="workerRemoveThree()"><img src="images/check.svg"></button>
 	<p class="item">зарплата наемных рабочих <span style="font-size:.75em">(табель, выплата, отчетность)</span></p>
 	</div>
 	<form id="formWorkerThree">
-	<input class="hide" type="text" id="worker-number-three" placeholder='сначала введите количество'>
+	<input class="hide" type="text" id="worker-number-three" placeholder='сначала введите количество' maxlength="3">
 	</form>
+	<p class="hide field" id="worker-field-three">Очистить поле</p>
 	<div class="row-wrap">
 	<button class="list-btn red" id="list-4-r-three" onclick="bookAddThree()"></button>
 	<button class="list-btn green centering hide" id="list-4-g-three" onclick="bookRemoveThree()"><img src="images/check.svg"></button>
@@ -356,7 +360,7 @@ document.getElementById("group-three").classList.add("hide");
 document.getElementById("total").innerHTML = 'Отметьте нужные услуги';
 document.getElementById("totalTwo").innerHTML = 'Отметьте нужные услуги';
 document.getElementById("totalThree").innerHTML = 'Отметьте нужные услуги';
-var report = 0; var bill = 0; var billNum = 0;
+var report = 0; var bill = 0; var billNum;
 var reportTwo = 0; var billTwo = 0; var billNumTwo; var worker = 0; var workerNum; var book = 0;
 var reportThree = 0; var billThree = 0; var billNumThree; var workerThree = 0; var workerNumThree; var bookThree = 0;
 
@@ -430,6 +434,22 @@ function billAddTwo(){
 document.getElementById("list-2-r-two").classList.add("hide");
 document.getElementById("list-2-rr-two").classList.remove("hide");
 document.getElementById("bill-number-two").classList.remove("hide");
+document.getElementById("bill-field-two").classList.remove("hide");
+//Разблокировать кнопку, если поле заполнено
+document.querySelector("#bill-number-two").addEventListener("keydown", (e) => {document.querySelector('#list-2-rr-two').removeAttribute("disabled");});
+}
+//Очистить поле
+document.querySelector("#bill-field-two").addEventListener("click", clearBillFieldTwo);
+function clearBillFieldTwo(){
+document.getElementById("formBillTwo").reset();
+document.querySelector('#list-2-rr-two').setAttribute("disabled", "disabled");
+	if(document.getElementById("list-2-g-two").classList.contains("hide")){
+	billTwo=0;
+	}else{
+	document.getElementById("list-2-rr-two").classList.remove("hide");
+	document.getElementById("list-2-g-two").classList.add("hide");
+	billTwo=0;}
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
 }
 function billCalcTwo(){
 document.getElementById("list-2-rr-two").classList.add("hide");
@@ -442,8 +462,10 @@ function billRemoveTwo(){
 document.getElementById("list-2-g-two").classList.add("hide");
 document.getElementById("list-2-r-two").classList.remove("hide");
 document.getElementById("bill-number-two").classList.add("hide");
+document.getElementById("bill-field-two").classList.toggle("hide");
 billTwo = 0;
 document.getElementById("formBillTwo").reset();
+document.querySelector('#list-2-rr-two').setAttribute("disabled", "disabled");
 document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
 }
 //Стоимость зарплатного проекта для 2 группы
@@ -451,6 +473,22 @@ function workerAdd(){
 document.getElementById("list-3-r-two").classList.add("hide");
 document.getElementById("list-3-rr-two").classList.remove("hide");
 document.getElementById("worker-number").classList.remove("hide");
+document.getElementById("worker-field").classList.remove("hide");
+//Разблокировать кнопку, если поле заполнено
+document.querySelector("#worker-number").addEventListener("keydown", (e) => {document.querySelector('#list-3-rr-two').removeAttribute("disabled");});
+}
+//Очистить поле
+document.querySelector("#worker-field").addEventListener("click", clearWorkerField);
+function clearWorkerField(){
+document.getElementById("formWorker").reset();
+document.querySelector('#list-3-rr-two').setAttribute("disabled", "disabled");
+	if(document.getElementById("list-3-g-two").classList.contains("hide")){
+	worker=0;
+	}else{
+	document.getElementById("list-3-rr-two").classList.remove("hide");
+	document.getElementById("list-3-g-two").classList.add("hide");
+	worker=0;}
+document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
 }
 function workerCalc(){
 document.getElementById("list-3-rr-two").classList.add("hide");
@@ -463,8 +501,10 @@ function workerRemove(){
 document.getElementById("list-3-g-two").classList.add("hide");
 document.getElementById("list-3-r-two").classList.remove("hide");
 document.getElementById("worker-number").classList.add("hide");
+document.getElementById("worker-field").classList.toggle("hide");
 worker = 0;
 document.getElementById("formWorker").reset();
+document.querySelector('#list-3-rr-two').setAttribute("disabled", "disabled");
 document.getElementById("totalTwo").innerHTML = reportTwo+billTwo+worker+book+' грн. /мес.';
 }
 //Стоимость книги доходов для 2 группы
@@ -498,6 +538,22 @@ function billAddThree(){
 document.getElementById("list-2-r-three").classList.add("hide");
 document.getElementById("list-2-rr-three").classList.remove("hide");
 document.getElementById("bill-number-three").classList.remove("hide");
+document.getElementById("bill-field-three").classList.remove("hide");
+//Разблокировать кнопку, если поле заполнено
+document.querySelector("#bill-number-three").addEventListener("keydown", (e) => {document.querySelector('#list-2-rr-three').removeAttribute("disabled");});
+}
+//Очистить поле
+document.querySelector("#bill-field-three").addEventListener("click", clearBillFieldThree);
+function clearBillFieldThree(){
+document.getElementById("formBillThree").reset();
+document.querySelector('#list-2-rr-three').setAttribute("disabled", "disabled");
+	if(document.getElementById("list-2-g-three").classList.contains("hide")){
+	billThree=0;
+	}else{
+	document.getElementById("list-2-rr-three").classList.remove("hide");
+	document.getElementById("list-2-g-three").classList.add("hide");
+	billThree=0;}
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
 }
 function billCalcThree(){
 document.getElementById("list-2-rr-three").classList.add("hide");
@@ -510,8 +566,10 @@ function billRemoveThree(){
 document.getElementById("list-2-g-three").classList.add("hide");
 document.getElementById("list-2-r-three").classList.remove("hide");
 document.getElementById("bill-number-three").classList.add("hide");
+document.getElementById("bill-field-three").classList.toggle("hide");
 billThree = 0;
 document.getElementById("formBillThree").reset();
+document.querySelector('#list-2-rr-three').setAttribute("disabled", "disabled");
 document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
 }
 //Стоимость зарплатного проекта для 3 группы
@@ -519,6 +577,22 @@ function workerAddThree(){
 document.getElementById("list-3-r-three").classList.add("hide");
 document.getElementById("list-3-rr-three").classList.remove("hide");
 document.getElementById("worker-number-three").classList.remove("hide");
+document.getElementById("worker-field-three").classList.remove("hide");
+//Разблокировать кнопку, если поле заполнено
+document.querySelector("#worker-number-three").addEventListener("keydown", (e) => {document.querySelector('#list-3-rr-three').removeAttribute("disabled");});
+}
+//Очистить поле
+document.querySelector("#worker-field-three").addEventListener("click", clearWorkerFieldThree);
+function clearWorkerFieldThree(){
+document.getElementById("formWorkerThree").reset();
+document.querySelector('#list-3-rr-three').setAttribute("disabled", "disabled");
+	if(document.getElementById("list-3-g-three").classList.contains("hide")){
+	workerThree=0;
+	}else{
+	document.getElementById("list-3-rr-three").classList.remove("hide");
+	document.getElementById("list-3-g-three").classList.add("hide");
+	workerThree=0;}
+document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
 }
 function workerCalcThree(){
 document.getElementById("list-3-rr-three").classList.add("hide");
@@ -531,8 +605,10 @@ function workerRemoveThree(){
 document.getElementById("list-3-g-three").classList.add("hide");
 document.getElementById("list-3-r-three").classList.remove("hide");
 document.getElementById("worker-number-three").classList.add("hide");
+document.getElementById("worker-field-three").classList.toggle("hide");
 workerThree = 0;
 document.getElementById("formWorkerThree").reset();
+document.querySelector('#list-3-rr-three').setAttribute("disabled", "disabled");
 document.getElementById("totalThree").innerHTML = reportThree+billThree+workerThree+bookThree+' грн. /мес.';
 }
 //Стоимость книги доходов для 3 группы
